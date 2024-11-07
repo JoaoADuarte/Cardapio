@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;
+    700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title> N'Canto Mineiro </title>
+</head>
+<body>
+
+    <!-- HEADER-->
+     <!-- src = logo-->
+      <!-- alt = Texto alternativo, 
+       HEADER é a imagem de fundo -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <!-- Centralização da logo e nome-->
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img 
+            src="./assets/Esfirra_carne.png" 
+            alt="Logo N'Canto"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+            <!-- Nome da lanchonete -->
+            <hi class="text-4xl mt-4 mb-2 font-bold text-white">
+                N'Canto Mineiro
+            </hi>
+            <!-- Endereço da Lanchonete-->
+            <span class="text-1xl font-medium text-white"> 
+                Rua: Joaquim Vicente Alves, Oficina NilCar, Simonésia - MG</span>
+            <!-- Horario de funcionamento, id date span manipula no jason -->
+            <div class="bg-green-600 px-5 py-1 rounded  mt-4 hover:translate-x-1 duration-150" id="date-span">
+                <span class="text-white font-medium"> Seg á Sext - 14:30 as 18:00 </span>
+            </div>
+
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> 
+        Conheça nosso Cardápio
+    </h2>
+    <p class="mb-4 text-center font-semibold">Obs: Entregas apartir de R$ 10.00.</p>
+
+    <!--Inicio do menu -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburguer.jpeg"
+                alt="Hamburguer assado"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Hamburguer assado</p>
+                    <p class="text-sm">Queijo, presunto, carne de hamburguer, 
+                        tomate e pimentão.</p>
+ 
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7.00</p>
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Hamburguer assado"
+                            data-price="7.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/Queijo_presunto.jpeg"
+                alt="Queijo presunto"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Queijo presunto</p>
+                    <p class="text-sm">Queijo, presunto, e orégano.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Queijo presunto"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/Esfirra_carne.png"
+                alt="Esfirra de carne"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Esfirra de carne</p>
+                    <p class="text-sm">Carne moída de boi.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Esfirra de carne"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/Esfirra_frango.jpeg"
+                alt="Esfirra de carne"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Esfirra de frango</p>
+                    <p class="text-sm">Frango.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Esfirra de frango"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/Mini_pizza.jpeg"
+                alt="Mini pizza"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Mini pizza</p>
+                    <p class="text-sm">Queijo, presunto, calabresa, tomate, orégano e pimentão.</p>
+ 
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Mini pizza"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/Pastel_italiano.jpeg"
+                alt="Pastel Italiano"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Pastel Italiano</p>
+                    <p class="text-sm">Queijo, massa e açucar.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Pastel Italiano"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img
+                src="./assets/empada_frango.jpeg"
+                alt="empada frango"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Empada frango</p>
+                    <p class="text-sm">Frango e creme da casa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00 </p>
+
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Empada frango"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+ 
+        </main>
+
+    
+<!------------------------------------------------Pães------------------------------------------------>
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h3 class="font-bold text-3xl">
+        Pães
+    </h3>
+</div>
+
+<!-- GRID Pães -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+
+    <div class="flex gap-2 w-full">
+        <img 
+        src="./assets/Pão boi.jpg"
+        alt="Pão com Carne"
+        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        />
+        <div class="w-full">
+            <p class="font-bold">Pão com Carne</p>
+            <p class="text-sm">Carne de boi, cebola, tomate, pimentão, alface e molho.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 13.00</p>
+
+                <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pao boi"
+                data-price="13.00"
+                >
+
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex gap-2 w-full">
+        <img 
+        src="./assets/Pao Linguica.png"
+        alt="Pão com Linguiça"
+        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        />
+        <div class="w-full">
+            <p class="font-bold">Pão com Linguiça</p>
+            <p class="text-sm">Linguiça, cebola, tomate, pimentão, alface e molho.</p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 13.00</p>
+
+                <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pao Linguica"
+                data-price="13.00"
+                >
+
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex gap-2 w-full">
+        <img 
+        src="./assets/Pao porco.png"
+        alt="Pao porco"
+        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        />
+        <div class="w-full">
+            <p class="font-bold">Pão com carne de Porco</p>
+            <p class="text-sm">Carne de porco, cebola, tomate, pimentão, alface e molho.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 13.00</p>
+
+                <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pao porco"
+                data-price="13.00"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- FIM GRID de Pães -->
+ 
+<!------------------------------------------------Adicionais------------------------------------------------>
+
+
+<div class="border-4 border-red-900 rounded-lg p-4 max-w-7xl mx-auto">
+    <div class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        <h2 class="font-bold text-3xl">Adicionais</h2>
+    </div>
+
+    <!-- GRID ADICIONAIS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 mx-auto px-2 mb-5" id="menu">
+        
+
+        <div class="flex items-center justify-center w-full">
+            <p class="font-bold text-lg">Queijo</p>
+            <div class="px-2 flex items-center gap-2">
+                <p class="font-bold px-5">R$ 2.00</p>
+                <button 
+                    class="bg-gray-900 px-4 rounded add-to-cart-btn my-2"
+                    data-name="Queijo"
+                    data-price="2.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="flex items-center justify-center w-full">
+            <p class="font-bold text-lg">Presunto</p>
+            <div class="px-2 flex items-center gap-4">
+                <p class="font-bold px-1">R$ 2.00</p>
+                <button 
+                    class="bg-gray-900 px-4 rounded add-to-cart-btn my-2"
+                    data-name="Presunto"
+                    data-price="2.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="flex items-center justify-center w-full">
+            <p class="font-bold text-lg">Ovo</p>
+            <div class="px-2 flex items-center gap-4">
+                <p class="font-bold px-6">R$ 2.00</p>
+                <button 
+                    class="bg-gray-900 px-4 rounded add-to-cart-btn my-2"
+                    data-name="Ovo"
+                    data-price="2.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- FIM GRID ADICIONAIS -->
+
+</div>
+
+<!------------------------------------------------Festa------------------------------------------------>
+            <div class="mx-auto max-w-7xl px-2 my-5">
+                <h3 class="font-bold text-3xl">
+                    Salgados para festa
+                </h3>
+            </div>
+
+            <!--GRID MINIS-->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+                <div class="flex gap-2 w-full">
+                    <img 
+                        src="./assets/Minizinhas.jpg"
+                        alt="Palha"
+                        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                    />
+
+                    <div class="w-full">
+                        <p class="font-bold text-lg">Sabores dos minis:</p>
+                        <p>Pizza, frango, carne, empada e pastel italiano.</p>
+                        <p class="text-sm text-red-800">Obs: Encomendar com pelo menos 1 dia de antecedência.</p>
+                        <div class="flex items-center gap-2 justify-between mt-1">
+                            <p class="font-bold text-lg">R$ 1.50 UN</p>
+
+                            <a href="https://wa.me/5522992213965?text=Olá, gostaria de realizar uma encomenda!" 
+                            target="_blank" 
+                            class="bg-green-500 px-4 py-2 rounded flex items-center gap-2 text-white">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!------------------------------------------------DOCES----------------------------------------------->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h3 class="font-bold text-3xl">
+                DOCES
+            </h3>
+        </div>
+        
+        <!--Fim do menu-->
+
+        <!--GRID DOCES-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="flex gap-2 w-full">
+                <img 
+                src="./assets/Palha.jpg"
+                alt="Palha"
+                class="w-28 h24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Palha italiana</p>
+                    <p class="text-sm">Bridageiro branco, com ninho e óreo.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 4.00</p>
+
+                        <button
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Palha"
+                        data-price="4.00">
+                        
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIMGRID DOCES-->
+<!------------------------------------------------BEBIDAS------------------------------------------------->
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>
+
+        <!-- Grid Bebidas-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/refri-1.png"
+                alt="Coca lata"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca lata</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.50</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca lata"
+                            data-price="5.50"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/refri-2.png"
+                alt="Guaraná lata"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná lata</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.50</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná lata"
+                            data-price="5.50"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/sukita.png"
+                alt="Sukita"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Sukita</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.50</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Sukita"
+                            data-price="5.50"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/coca 2l.png"
+                alt="Coca 2L"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca 2L</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 13.00</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca 2L"
+                            data-price="13.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/Guarana 2l.png"
+                alt="Guarana 2L"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná 2L</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 13.00</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná 2L"
+                            data-price="13.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+<!-----------------------------SUCOS-------------------------------------->
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/Suco-Maracuja.png"
+                alt="Suco Maracujá"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Suco Maracujá 500ml</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Suco Maracuja"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/Graviola.png"
+                alt="Suco Graviola"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Suco Graviola 500ml</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Suco Graviola"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+
+
+            <!-- BEBIDA item-->
+            <div class="flex gap-2 w-full">
+                <img
+                src="./assets/Suco morango.png"
+                alt="Suco Morango"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Suco Morango 500ml</p>
+                    <!--Preço e botão, add-to-cart-btn é a nossa class no jason-->
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <!-- Data name e data price é uma propriedade utilizado no js, 
+                        quando ocorrer o clique ele pega qual o item clicado-->
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Suco Morango"
+                            data-price="6.00"
+                            >      
+                            <i class="fa fa-cart-plus text-lg text-white"></i>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim BEBIDA item-->
+        </div>
+
+
+<!------------------------------------------------CARRINHO------------------------------------------------->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"> <!--Fundo na parte de confirmação dos itens-->
+        
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class=" text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span> </p>
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input 
+            type="text"
+            placeholder="Digite seu endereço completo"
+            id="address"
+            class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <p class="font-bold">Troco?</p>
+            <input 
+            type="text"
+            placeholder="Digite o seu troco ou forma de pagamento."
+            id="troco"
+            class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="bg-red-500 hidden" id="troco-warn">Digite a forma de pagamento ou o seu troco!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="closed-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!--FIM CARRINHO-->
+
+<!------------------------------------------------BUTTON CARD FOOTER------------------------------------------------>
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button 
+            class="flex items-center gap-2 text-white"
+            id="cart-btn"
+        >
+            (<span id="cart-count">0</span>)
+            Ver Carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <!--FIM BUTTON CARD FOOTER-->
+
+</body>
+</html>
