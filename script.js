@@ -206,7 +206,7 @@ checkoutBtn.addEventListener("click", function(){
         `%0ATotal do pedido: R$ ${total.toFixed(2)}` +
         trocoMessage;
 
-    const phone = "33988538798";
+    const phone = "5533988538798";
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 });
 
