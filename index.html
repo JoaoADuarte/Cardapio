@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;
-    700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" 
+    rel="stylesheet">
 
-    <!-- Font Awesome -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,14 +21,13 @@
 <body>
 
     <!-- HEADER-->
-     <!-- src = logo-->
       <!-- alt = Texto alternativo, 
        HEADER é a imagem de fundo -->
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <!-- Centralização da logo e nome-->
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img 
-            src="./assets/Esfirra_carne.png" 
+            src="./assets/Logo N'Canto.png" 
             alt="Logo N'Canto"
             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
             />
@@ -38,7 +37,7 @@
             </hi>
             <!-- Endereço da Lanchonete-->
             <span class="text-1xl font-medium text-white"> 
-                Rua: Joaquim Vicente Alves, Oficina NilCar, Simonésia - MG</span>
+                Rua: Joaquim Vicente Alves, Oficina NilCar.</span>
             <!-- Horario de funcionamento, id date span manipula no jason -->
             <div class="bg-green-600 px-5 py-1 rounded  mt-4 hover:translate-x-1 duration-150" id="date-span">
                 <span class="text-white font-medium"> Seg á Sext - 14:30 as 18:00 </span>
@@ -53,6 +52,7 @@
     <p class="mb-4 text-center font-semibold">Obs: Entregas apartir de R$ 10.00.</p>
 
     <!--Inicio do menu -->
+    <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
 
             <div class="flex gap-2">
@@ -72,7 +72,7 @@
 
                         <button 
                             class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Hamburguer assado"
+                            data-name="Hamburguer assado -"
                             data-price="7.00"
                             >      
                             <i class="fa fa-cart-plus text-lg text-white"></i>>
@@ -84,7 +84,7 @@
             <div class="flex gap-2">
                 <img
                 src="./assets/Queijo_presunto.jpeg"
-                alt="Queijo presunto"
+                alt="Queijo presunto "
                 class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
                 />
 
@@ -98,7 +98,7 @@
 
                         <button 
                             class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Queijo presunto"
+                            data-name="Queijo presunto -"
                             data-price="6.00"
                             >      
                             <i class="fa fa-cart-plus text-lg text-white"></i>>
@@ -110,7 +110,7 @@
             <div class="flex gap-2">
                 <img
                 src="./assets/Esfirra_carne.png"
-                alt="Esfirra de carne"
+                alt="Esfirra de carne "
                 class="w-28 h-24 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
                 />
 
@@ -123,7 +123,7 @@
 
                         <button 
                             class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Esfirra de carne"
+                            data-name="Esfirra de carne -"
                             data-price="6.00"
                             >      
                             <i class="fa fa-cart-plus text-lg text-white"></i>>
@@ -234,93 +234,94 @@
             </div>
  
         </main>
+    
 
     
 <!------------------------------------------------Pães------------------------------------------------>
-<div class="mx-auto max-w-7xl px-2 my-2">
-    <h3 class="font-bold text-3xl">
-        Pães
-    </h3>
-</div>
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h3 class="font-bold text-3xl">
+                Pães
+            </h3>
+        </div>
 
-<!-- GRID Pães -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!-- GRID Pães -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
 
 
-    <div class="flex gap-2 w-full">
-        <img 
-        src="./assets/Pão boi.jpg"
-        alt="Pão com Carne"
-        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-        />
-        <div class="w-full">
-            <p class="font-bold">Pão com Carne</p>
-            <p class="text-sm">Carne de boi, cebola, tomate, pimentão, alface e molho.</p>
-            <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 13.00</p>
+            <div class="flex gap-2 w-full">
+                <img 
+                src="./assets/Pão boi.jpg"
+                alt="Pão com Carne"
+                class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Pão com Carne</p>
+                    <p class="text-sm">Carne de boi, cebola, tomate, pimentão, alface e molho.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 11.00</p>
 
-                <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Pao boi"
-                data-price="13.00"
-                >
+                        <button
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Pao boi"
+                        data-price="11.00"
+                        >
 
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="flex gap-2 w-full">
+            <img 
+            src="./assets/Pao Linguica.png"
+            alt="Pão com Linguiça"
+            class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            />
+            <div class="w-full">
+                <p class="font-bold">Pão com Linguiça</p>
+                <p class="text-sm">Linguiça, cebola, tomate, pimentão, alface e molho.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 11.00</p>
+
+                    <button
+                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                    data-name="Pao Linguica"
+                    data-price="11.00"
+                    >
+
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
+        <div class="flex gap-2 w-full">
+            <img 
+            src="./assets/Pao porco.png"
+            alt="Pao porco"
+            class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            />
+            <div class="w-full">
+                <p class="font-bold">Pão com carne de Porco</p>
+                <p class="text-sm">Carne de porco, cebola, tomate, pimentão, alface e molho.</p>
 
-    <div class="flex gap-2 w-full">
-        <img 
-        src="./assets/Pao Linguica.png"
-        alt="Pão com Linguiça"
-        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-        />
-        <div class="w-full">
-            <p class="font-bold">Pão com Linguiça</p>
-            <p class="text-sm">Linguiça, cebola, tomate, pimentão, alface e molho.</p>
-            <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 13.00</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 11.00</p>
 
-                <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Pao Linguica"
-                data-price="13.00"
-                >
-
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
+                    <button
+                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                    data-name="Pao porco"
+                    data-price="11.00"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
             </div>
         </div>
+
     </div>
-
-    <div class="flex gap-2 w-full">
-        <img 
-        src="./assets/Pao porco.png"
-        alt="Pao porco"
-        class="w-28 h-24 rounded-md hover:scale-110 hover:rotate-2 duration-300"
-        />
-        <div class="w-full">
-            <p class="font-bold">Pão com carne de Porco</p>
-            <p class="text-sm">Carne de porco, cebola, tomate, pimentão, alface e molho.</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 13.00</p>
-
-                <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Pao porco"
-                data-price="13.00"
-                >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-</div>
 
 
 <!-- FIM GRID de Pães -->
@@ -331,6 +332,8 @@
 <div class="border-4 border-red-900 rounded-lg p-4 max-w-7xl mx-auto">
     <div class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         <h2 class="font-bold text-3xl">Adicionais</h2>
+        <h2 class="font-medium text-xl">Obs: Apenas para os pães.
+        </h2>
     </div>
 
     <!-- GRID ADICIONAIS -->
@@ -391,7 +394,7 @@
             </div>
 
             <!--GRID MINIS-->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-10" id="menu">
                 <div class="flex gap-2 w-full">
                     <img 
                         src="./assets/Minizinhas.jpg"
@@ -693,44 +696,58 @@
             </div>
             <!-- Fim BEBIDA item-->
         </div>
+    </div>
 
 
 <!------------------------------------------------CARRINHO------------------------------------------------->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"> <!--Fundo na parte de confirmação dos itens-->
+<div 
+    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal"
+> <!--Fundo na parte de confirmação dos itens-->
+    
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+        <!-- Container para os itens do carrinho com rolagem -->
+        <div id="cart-items" class="flex justify-between mb-2 flex-col overflow-y-auto" style="max-height: 400px;"></div>
+
+        <p class="font-bold">Total: <span id="cart-total">0.00</span> </p>
         
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            <h2 class=" text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
-
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-
-            <p class="font-bold">Total: <span id="cart-total">0.00</span> </p>
-            <p class="font-bold mt-4">Endereço de entrega:</p>
-            <input 
+        <p class="font-bold mt-4">Endereço de entrega:</p>
+        <input 
             type="text"
             placeholder="Digite seu endereço completo"
             id="address"
             class="w-full border-2 p-1 rounded my-1"
-            />
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+            
+        />
+        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
-            <p class="font-bold">Troco?</p>
-            <input 
+        <p class="font-bold">Forma de pagamento:</p>
+        <input 
             type="text"
             placeholder="Digite o seu troco ou forma de pagamento."
             id="troco"
             class="w-full border-2 p-1 rounded my-1"
-            />
-            <p class="bg-red-500 hidden" id="troco-warn">Digite a forma de pagamento ou o seu troco!</p>
+        />
+        <p class="text-red-500 hidden" id="troco-warn">Digite a forma de pagamento ou o seu troco!</p>
 
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button id="closed-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-            </div>
+        <p class="font-bold">Observações:</p>
+        <input 
+            type="text"
+            placeholder="Digite aqui suas observações do pedido."
+            id="Obs"
+            class="w-full border-2 p-1 rounded my-1"
+        >
 
+        <div class="flex items-center justify-between mt-5 w-full">
+            <button id="closed-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
         </div>
-
     </div>
-    <!--FIM CARRINHO-->
+</div>
+<!-- FIM CARRINHO -->
+
 
 <!------------------------------------------------BUTTON CARD FOOTER------------------------------------------------>
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
@@ -746,5 +763,6 @@
 
     <!--FIM BUTTON CARD FOOTER-->
 
+    <script src="script.js"></script>
 </body>
 </html>

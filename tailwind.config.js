@@ -7,7 +7,7 @@ module.exports = {
     },
     extend: {
       backgroundImage:{
-        "home": "url('/assets/lanchonete.jpg')"
+        "home": "url('/assets/Banner N’Canto.png')"
       }
     },
   },
