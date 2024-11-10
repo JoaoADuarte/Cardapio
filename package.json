@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
-    "build": "cross-env NODE_ENV=production npx tailwindcss -i ./styles/style.css -o ./styles/output.css --minify"
+    "dev": "next dev tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
+    "build": "next build NODE_ENV=production npx tailwindcss -i ./styles/style.css -o ./styles/output.css --minify",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
