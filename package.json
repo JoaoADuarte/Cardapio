@@ -2,10 +2,11 @@
   "name": "ncanto",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "dev": "tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
-    "build": "next build && tailwindcss -i ./styles/style.css -o ./styles/output.css --minify"
-  },
+"scripts": {
+  "dev": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch",
+  "build": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --minify"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
