@@ -25,7 +25,9 @@
        HEADER é a imagem de fundo -->
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <!-- Centralização da logo e nome-->
+
         <div class="w-full h-full flex flex-col justify-center items-center">
+
             <img 
             src="./assets/Logo N'Canto.png" 
             alt="Logo N'Canto"
@@ -36,15 +38,18 @@
                 N'Canto Mineiro
             </hi>
             <!-- Endereço da Lanchonete-->
-            <span class="text-1xl font-medium text-white"> 
+            <span class="text-1xl font-medium mb-5 text-white"> 
                 Rua: Joaquim Vicente Alves, Oficina NilCar.</span>
             <!-- Horario de funcionamento, id date span manipula no jason -->
-            <div class="bg-green-600 px-5 py-1 rounded  mt-5 hover:translate-x-1 duration-150" id="date-span">
-                <span class="text-white font-medium"> Seg á Sex - 14:30 as 18:00 </span>
-            </div>
-
         </div>
+ 
     </header>
+    
+    <h1 class="w-full h-full flex flex-col justify-center items-center ">
+        <div class="bg-green-600 px-5 py-1 rounded  mt-5 hover:translate-x-1 duration-150" id="date-span">
+            <span class="text-white font-medium"> Seg á Sex - 14:30 as 18:00 </span>
+        </div>
+    </h1>
 
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> 
         Conheça nosso Cardápio
@@ -704,7 +709,6 @@
     class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
     id="cart-modal"
 > <!--Fundo na parte de confirmação dos itens-->
-    
     <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
 
@@ -719,19 +723,35 @@
             placeholder="Digite seu endereço completo"
             id="address"
             class="w-full border-2 p-1 rounded my-1"
-            
         />
+
         <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
-        <p class="font-bold">Forma de pagamento:</p>
-        <input 
-            type="text"
-            placeholder="Digite o seu troco ou forma de pagamento."
-            id="troco"
-            class="w-full border-2 p-1 rounded my-1"
-        />
-        <p class="text-red-500 hidden" id="troco-warn">Digite a forma de pagamento ou o seu troco!</p>
+        <!-- Dropdown para escolher a forma de pagamento -->
+        <label for="Pagamento" class="font-bold mt-2">Forma de Pagamento:</label>
+        <select name="Pagamento" id="Pagamento" onchange="verificarOpcao()" class="border-2 rounded-full">
 
+            <option value="_blank"></option>
+            <option value="Credito">Crédito</option>
+            <option value="Debito">Débito</option>
+            <option value="Pix">Pix</option>
+            <option value="Dinheiro">Dinheiro</option>
+        </select>
+
+        <p class="text-red-500 hidden" id="payment-warn">Selecione método de pagamento.</p>
+
+        <!-- Campo de valor a pagar, que aparece apenas para a opção "Dinheiro" -->
+        <div id="campoValor" style="display:none;">
+            <label for="valor" class="font-bold mt-2">Troco para:</label>
+            <input 
+                type="text" 
+                id="valor" 
+                name="valor" 
+                placeholder="R$" 
+                class="w-28 border-2 p-1 rounded my-1"
+                oninput="formatarMoeda(event)">
+        </div>
+        <p class="text-red-500 hidden" id="troco-warn">Valor menor que o total. </p>
         <p class="font-bold">Observações:</p>
         <input 
             type="text"
@@ -740,12 +760,45 @@
             class="w-full border-2 p-1 rounded my-1"
         >
 
+        
+
         <div class="flex items-center justify-between mt-5 w-full">
             <button id="closed-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
             <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
         </div>
     </div>
 </div>
+
+<script>
+    // Função para verificar a opção selecionada no campo de pagamento
+    function verificarOpcao() {
+        const opcaoSelecionada = document.getElementById("Pagamento").value;
+        const campoValor = document.getElementById("campoValor");
+
+        // Verifica se a opção selecionada é "Dinheiro"
+        if (opcaoSelecionada === "Dinheiro") {
+            campoValor.style.display = "block"; // Exibe o campo de valor
+        } else {
+            campoValor.style.display = "none"; // Oculta o campo de valor
+            document.getElementById("valor").value = ""; // Limpa o campo de valor
+        }
+    }
+
+    // Função para formatar o valor digitado como moeda
+    function formatarMoeda(event) {
+        let valor = event.target.value;
+
+        // Remove tudo que não é dígito
+        valor = valor.replace(/\D/g, "");
+
+        // Formata o valor em reais (R$)
+        valor = (valor / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+        // Atualiza o valor formatado no campo
+        event.target.value = valor;
+    }
+</script>
+
 <!-- FIM CARRINHO -->
 
 
