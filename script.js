@@ -265,8 +265,8 @@ checkoutBtn.addEventListener("click", function() {
 
     // Cria a mensagem de pedido para o WhatsApp com a forma de pagamento e o troco (se aplicável)
     const cartItems = cart.map((item) => {
-        return `${item.name} Quantidade: (${item.quantity}) Preço: R$ ${item.price}`;
-    }).join(" | ");
+        return `${item.name} Quantidade: (${item.quantity})`;
+    }).join("\n");
 
     const message = encodeURIComponent(cartItems) +
         `%0AEndereço: ${addressInput.value}` +
